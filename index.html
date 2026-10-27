@@ -117,8 +117,11 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "1080px";
-        canvas.style.height = "1920px";
+        // Desktop style: PC에서도 모바일처럼 화면에 꽉 차게 설정
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+        document.querySelector("#unity-container").className = "unity-mobile";
+        canvas.className = "unity-mobile";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
